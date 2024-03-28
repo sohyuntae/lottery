@@ -1,3 +1,27 @@
 spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    # In-Memory mode
+    # url: jdbc:h2:mem:lotte
+    # Embedded mode
+    url: jdbc:h2:~/lotte
+    username: lotte
+    password: lotte
   application:
     name: lottery
+
+  h2:
+    # H2 DB를 웹에서 관리할 수 있는 기능
+    console:
+      # H2 Console 사용 여부 (default: false)
+      enabled: true
+      # H2 Console 접속 주소 (default: /h2-console)
+      path: /h2-console
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+server:
+  port: 11040

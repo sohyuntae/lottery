@@ -22,7 +22,15 @@ dependencies {
     /* spring boot */
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-mustache")
-    // implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:latest.release"))
+    implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    /* scalar 사용가능하게 해주는 라이브러리 */
+    implementation("com.netflix.graphql.dgs:graphql-dgs-extended-scalars")
+
+    /* DB */
+    runtimeOnly("com.h2database:h2")
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     /* spring boot test */

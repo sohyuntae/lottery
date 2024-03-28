@@ -1,0 +1,9 @@
+extend type Query {
+    # all Lottery Select
+    allLotteList: [Lottery]
+}
+
+type Lottery {
+    lotteryKey: Long
+    lotteNumber: String
+}

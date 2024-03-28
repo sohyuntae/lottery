@@ -1,0 +1,29 @@
+scalar DateTime
+scalar Long
+
+type Query {
+    "show Test"
+    shows(titleFilter: String): [Show]
+}
+
+type Mutation {
+    "show Test add"
+    addShows(show: showInfo): Boolean
+}
+
+type Show {
+    # 제목
+    title: String
+    # 년도
+    releaseYear: Int
+}
+
+ input showInfo {
+     title: String!
+     releaseYear: Int
+ }
+
+schema {
+    query: Query
+    mutation: Mutation
+}
