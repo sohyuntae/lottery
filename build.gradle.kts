@@ -5,6 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.4"
     kotlin("jvm") version "1.9.23"
     kotlin("plugin.spring") version "1.9.23"
+    kotlin("plugin.jpa") version "1.9.23"
 }
 
 group = "com.service"
@@ -21,7 +22,6 @@ repositories {
 dependencies {
     /* spring boot */
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-mustache")
     implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:latest.release"))
     implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -35,6 +35,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     /* spring boot test */
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("com.netflix.graphql.dgs:graphql-dgs-client")
 }
 
 tasks.withType<KotlinCompile> {
