@@ -12,5 +12,4 @@ class LotteryController {
         val hello = "Hello World"
         return ResponseEntity.ok(hello)
     }
-
 }

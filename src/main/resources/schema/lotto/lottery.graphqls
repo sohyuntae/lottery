@@ -1,9 +1,17 @@
 extend type Query {
     # all Lottery Select
-    allLotteList: [Lottery]
+    findLottoList: [Lottery]
 }
 
 type Lottery {
-    lotteryKey: Long
-    lotteNumber: String
+    lottoKey: Long
+    lottoYear: Long
+    lottoDate: DateTime
+    lottoNumber1: Long
+    lottoNumber2: Long
+    lottoNumber3: Long
+    lottoNumber4: Long
+    lottoNumber5: Long
+    lottoNumber6: Long
+    lottoNumberB: Long
 }
